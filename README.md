@@ -6,6 +6,19 @@ In the 2nd phase project used linear regression and ARIMA using grid search tech
 
 Data is measured in USD and are linked to Close price index. Therefore related to inflation. Much of the trend is merely due to inflation. Therefore, series has been defalated to de-trend the data. Eliminated seasonal patterns by substracting periodical values. Data here is daily scale and converted to monthly scale for computational ease. Therefore convetrted to 12-month seasonal and used 12-lag difference to get a flatter series. Also used logging to linearise with an exponential trend. 
 
+# Linear regression
+
+In linear regression vilatility has been taken care with added:
+f01 = (High - Low)/(Low)*100
+f02 = (Close - Open)/(Open)*100
+f03 = (Close) / (Open)-1
+
+Moreover, moving averages of long and short window was taken: 
+s01 = Close.rolling(window=30)
+s02 = Close.rolling(window=100)
+
+# ARIMA
+
 Performed logarithm transofrmation to stabilise (heteroscedasticity) the series.
 Logarithm transformation equals the sum of the logarithms, i.e., LOG(XY) = LOG(X) + LOG(Y). This converts multiplicative to additive and random walk to geometric random walk i.e.exponential trends to linear trends. This also helps starightening out exponential growth patterns to fit into a linear model. Logging helps to incorporate an explicit forecast of future inflation into the model.
 
