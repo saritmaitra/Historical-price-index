@@ -11,12 +11,15 @@ Data is measured in USD and are linked to Close price index. Therefore related t
 In linear regression vilatility has been taken care with added features:
 
 f01 = (High - Low)/(Low)*100
+
 f02 = (Close - Open)/(Open)*100
+
 f03 = (Close) / (Open)-1
 
 Moreover, moving averages of long and short window was taken:
 
 s01 = Close.rolling(window=30)
+
 s02 = Close.rolling(window=100)
 
 # ARIMA
