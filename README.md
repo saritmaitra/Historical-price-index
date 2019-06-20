@@ -30,9 +30,11 @@ Logarithm transformation equals the sum of the logarithms, i.e., LOG(XY) = LOG(X
 That's typically a series of daily returns where each return is expressed in continually compounded terms. For each day, we take the natural log of the ratio of stock prices (i.e., price today divided by price yesterday, and so on). This series of daily returns where each return is expressed in continually compounded terms. For each day, a natural log was taken of the ratio of stock prices (i.e., price today divided by price yesterday, and so on).
 
 Rt = ln(St/St-1), Rt = return of the day, St = price on day t, St-1 = price day before t.
+
 This produces a series of daily returns, from ui to Rt-n, depending niumber of days (n = days) measuring. This is simple moving average of the squared periodic returns and each squared return is given an equal weight. 
 
 Also performed exponentially weighted moving average (EWM). Here, instead of equal weights in moving average, each squared return is weighted by a multiplier. The weakness of simple moving average is that all returns earn the same weight. Recent return has no more influence on the variance than last month's return. Therefore in EWM more recent returns have greater weight on the variance. This ensures a variance that is weighted toward more recent data.
 
 The unpredictable appmplitude of seasonal variations suggests multiplicative pattern.
+
 Gold price = trend* seasonal*residual(multiplicative)
