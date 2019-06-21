@@ -1,4 +1,5 @@
-# Predictive modeling using linear regression and ARIMA
+# Predictive modeling using Regression Techniques and ARIMA
+
 The project used NYSE stock index of Gold price (2000-2019) to create a predictive model to forecast future price. 
 
 In the 1st pahse project used a simple auto correlation and partial auto correlation to forecast future price.
@@ -35,6 +36,43 @@ This produces a series of daily returns, from ui to Rt-n, depending niumber of d
 
 Also performed exponentially weighted moving average (EWM). Here, instead of equal weights in moving average, each squared return is weighted by a multiplier. The weakness of simple moving average is that all returns earn the same weight. Recent return has no more influence on the variance than last month's return. Therefore in EWM more recent returns have greater weight on the variance. This ensures a variance that is weighted toward more recent data.
 
-The unpredictable appmplitude of seasonal variations suggests multiplicative pattern.
+The unpredictable amplitude of seasonal variations suggests multiplicative pattern.
 
 Gold price = trend* seasonal*residual(multiplicative)
+
+# Multivariate regression
+
+Univariate time series=
+
+                Yt = m + ɸYt-1 + ɛ
+                
+•	Yt= stationary time series and a linear combination of its past values t-1, t-2….
+
+•	m=coefficient
+
+•	ɸ = slope coefficient
+
+•	ɛ = error terms(white noise)
+
+Structural model-
+
+                Yt = β0 + β1X
+                
+•	Y= dependent variable
+
+•	X = independent variable
+
+•	β0 = intercept
+
+•	β1 = slope coefficient
+
+Structural model do not have time component because of auto correlation issue. With time component, the values will be correlated with time, which impacts error term. Therefore, variables here added with cross section.
+
+# Multivariate time series which combines above-
+
+Structural model do not have time component because of auto correlation issue. With time component, the values will be correlated with time, which impacts error term. Therefore, variables here added with cross section.
+
+Multivariate time series which combines above-
+
+                Yt = μ + ɸ1Yt-1 + ɸ2Xt-1 + ɛt, 
+                both Yt and Xt are stationary time series
